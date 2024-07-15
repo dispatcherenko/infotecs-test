@@ -1,0 +1,17 @@
+.button,
+.input,
+.select {
+  @include component;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}

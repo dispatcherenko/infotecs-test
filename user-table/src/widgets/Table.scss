@@ -1,0 +1,43 @@
+.table {
+  margin: 20px 0 40px;
+  overflow: hidden;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td,
+th {
+  border: solid 1px $grey-light;
+  border-style: none solid solid none;
+  padding: 10px;
+}
+
+th {
+  background-color: $grey-lighter;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+tr:first-child th {
+  border-top-style: solid;
+}
+
+tr th:first-child,
+td:first-child {
+  border-left-style: solid;
+}
