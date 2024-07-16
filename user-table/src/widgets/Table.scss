@@ -3,20 +3,44 @@
   overflow: hidden;
 }
 
+.resizer {
+  background: transparent;
+  cursor: col-resize;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 2px;
+
+  &:hover {
+    background: rgb(99 102 241);
+  }
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
 }
 
 td,
 th {
+  position: relative;
   border: solid 1px $grey-light;
   border-style: none solid solid none;
   padding: 10px;
+  min-width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 th {
   background-color: $grey-lighter;
+  user-select: none;
 }
 
 tr:first-child th:first-child {

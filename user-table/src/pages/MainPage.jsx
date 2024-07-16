@@ -12,7 +12,10 @@ const MainPage = (props) => {
         sort={props.sort}
         setSort={props.setSort}
       />
-      <TableComponent users={props.users} />
+      <TableComponent
+        users={props.users}
+        setSelectedUser={props.setSelectedUser}
+      />
     </main>
   );
 };
