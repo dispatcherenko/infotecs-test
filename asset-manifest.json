@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/infotecs/static/css/main.18958b25.css",
-    "main.js": "/infotecs/static/js/main.1e3691fe.js",
-    "static/media/close.svg": "/infotecs/static/media/close.c8665b41dbd8ee825b096286c4333e9f.svg",
-    "index.html": "/infotecs/index.html",
-    "static/media/sort-asc.svg": "/infotecs/static/media/sort-asc.57e64072ade71de18299301b59e8b435.svg",
-    "static/media/sort-desc.svg": "/infotecs/static/media/sort-desc.485d2d88e42be6191c4f9bb83c41a208.svg",
-    "main.18958b25.css.map": "/infotecs/static/css/main.18958b25.css.map",
-    "main.1e3691fe.js.map": "/infotecs/static/js/main.1e3691fe.js.map"
+    "main.css": "/infotecs-test/static/css/main.18958b25.css",
+    "main.js": "/infotecs-test/static/js/main.4542c5e9.js",
+    "static/media/close.svg": "/infotecs-test/static/media/close.c8665b41dbd8ee825b096286c4333e9f.svg",
+    "index.html": "/infotecs-test/index.html",
+    "static/media/sort-asc.svg": "/infotecs-test/static/media/sort-asc.57e64072ade71de18299301b59e8b435.svg",
+    "static/media/sort-desc.svg": "/infotecs-test/static/media/sort-desc.485d2d88e42be6191c4f9bb83c41a208.svg",
+    "main.18958b25.css.map": "/infotecs-test/static/css/main.18958b25.css.map",
+    "main.4542c5e9.js.map": "/infotecs-test/static/js/main.4542c5e9.js.map"
   },
   "entrypoints": [
     "static/css/main.18958b25.css",
-    "static/js/main.1e3691fe.js"
+    "static/js/main.4542c5e9.js"
   ]
 }
