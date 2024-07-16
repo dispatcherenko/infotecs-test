@@ -2,7 +2,7 @@
   "name": "user-table",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dispatcherenko.github.io/infotecs",
+  "homepage": "https://dispatcherenko.github.io/infotecs-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,6 +20,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

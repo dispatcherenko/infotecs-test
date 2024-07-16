@@ -8,6 +8,7 @@ import sortDesc from "@shared/images/sort-desc.svg";
 import "./Filters.scss";
 
 const Filters = (props) => {
+  // Смена порядка сортировки
   const changeOrder = () => {
     props.setSort((prev) => {
       if (prev) {
@@ -21,6 +22,7 @@ const Filters = (props) => {
     });
   };
 
+  // Смена типа сортировки
   const changeSort = (e) => {
     const selectedSort = e.target.value;
     props.setSort((prev) => {

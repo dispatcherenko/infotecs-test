@@ -3,6 +3,7 @@ import { HandySvg } from "handy-svg";
 import close from "@shared/images/close.svg";
 import "./Modal.scss";
 
+// Модальное окно
 const Modal = (props) => {
   return (
     <div className="modal__bg" onClick={props.onClose}>

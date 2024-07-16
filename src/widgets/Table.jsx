@@ -5,6 +5,7 @@ const Table = ({ users, setSelectedUser }) => {
   const [colWidths, setColWidths] = useState({});
   const thRefs = useRef([]);
 
+  // Обработка взаимодействия с рамками таблицы
   const HandleMouseDown = (e, index) => {
     e.stopPropagation();
 

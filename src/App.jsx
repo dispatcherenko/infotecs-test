@@ -15,6 +15,7 @@ function App() {
 
   const [error, setError] = useState();
 
+  // Получение данных с апи
   const fetchData = useCallback(async () => {
     try {
       setError(null);
@@ -45,6 +46,7 @@ function App() {
     setSearchQuery(e.target.value);
   };
 
+  // Вызывается при попытке закрыть модальное окно с описанием пользователя
   const onClose = () => {
     setSelectedUser(null);
   };
