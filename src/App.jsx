@@ -1,6 +1,5 @@
 import "./styles.scss";
 import { useCallback, useEffect, useState } from "react";
-import { useDebounce } from "use-debounce";
 import MainPage from "./pages/MainPage";
 import UserInfoModal from "@widgets/UserInfoModal";
 import Modal from "@shared/UI/Modal";
@@ -8,10 +7,6 @@ import Modal from "@shared/UI/Modal";
 function App() {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState();
-
-  const [searchQuery, setSearchQuery] = useState("");
-  const [debouncedQuery] = useDebounce(searchQuery, 500);
-  const [sort, setSort] = useState({ sortBy: "none", order: "asc" });
 
   const [error, setError] = useState();
 
@@ -21,13 +16,10 @@ function App() {
       setError(null);
 
       let res;
-      debouncedQuery === ""
-        ? (res = await fetch(
-            `https://dummyjson.com/users?limit=0&sortBy=${sort.sortBy}&order=${sort.order}`
-          ))
-        : (res = await fetch(
-            `https://dummyjson.com/users/search?q=${debouncedQuery}&limit=0&sortBy=${sort.sortBy}&order=${sort.order}`
-          ));
+
+      res = await fetch(`http://localhost:3001/api/users`, {
+        method: "GET",
+      })
 
       const data = await res.json();
       setUsers(data.users);
@@ -36,15 +28,11 @@ function App() {
         "Произошла ошибка при загрузке данных, пожалуйста, попробуйте позже."
       );
     }
-  }, [debouncedQuery, sort]);
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, [debouncedQuery, sort]);
-
-  const handleSearch = (e) => {
-    setSearchQuery(e.target.value);
-  };
+  }, [fetchData]);
 
   // Вызывается при попытке закрыть модальное окно с описанием пользователя
   const onClose = () => {
@@ -57,11 +45,7 @@ function App() {
       {selectedUser && <UserInfoModal user={selectedUser} onClose={onClose} />}
 
       <MainPage
-        searchQuery={searchQuery}
-        handleSearch={handleSearch}
         users={users}
-        sort={sort}
-        setSort={setSort}
         setSelectedUser={setSelectedUser}
       />
     </div>
